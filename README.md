@@ -1,102 +1,113 @@
-**Ocean View Resort Reservation System
-**
-This project is a web-based hotel reservation management system developed using Java, JSP, Servlets, and MySQL.
-The system allows administrators and receptionists to manage hotel reservations, generate billing invoices, and maintain reservation records efficiently.
+#Ocean View Resort Reservation System
+##Project Overview
 
-Project Overview
-The Ocean View Resort Reservation System was developed to simplify the process of managing hotel reservations.
-The system replaces manual reservation handling with a digital solution that improves efficiency, accuracy, and data management.
+The Ocean View Resort Reservation System is a web-based hotel reservation management system developed using Java, JSP, Servlets, Apache Tomcat, and MySQL.
+This system helps hotel administrators and receptionists manage reservations, generate invoices, and maintain guest records efficiently
 
-Users can:
+##Technologies Used
 
-Log into the system securely
-Create and manage reservations
-Generate billing invoices automatically
-Search and export reservation records
-Manage system data using role-based access control
-Technologies Used
-The following technologies were used to develop the system:
-Java – Core programming language
-JSP (Java Server Pages) – Web interface development
-Servlets – Backend request handling
-MySQL – Database management system
-Bootstrap – Responsive UI design
-Git & GitHub – Version control and project management
-Apache Tomcat – Web server for deployment
+The following technologies were used in the development of this system:
 
-**System Features
-**The system includes the following functionalities:
+-Java (Backend Programming)
+-JSP – Java Server Pages
+-Servlets – Request Handling
+-Apache Tomcat – Application Server
+=MySQL – Database Management System
+-MySQL Workbench – Database Design Tool
+-Bootstrap – User Interface Design
+-Eclipse IDE – Development Environment
+-Git & GitHub – Version Control
 
-User Authentication
-Secure login system
+##System Features
 
-Role-based access control (Admin / Reception)
+The system includes the following features:
 
-Reservation Management
-Add new reservations
-Edit reservation details
-Delete reservations
-View reservation records
-Billing Management
-Automatic bill generation
-Calculation of room charges and service charges
-Printable invoice generation
-Data Management
-Search reservations
-Export reservation data to CSV
-Filter reservations by date
+-Secure User Login Authentication
+-Role-based access control
+-Add new reservations
+-Edit reservation details
+-Delete reservations
+-View reservation list
+-Generate billing invoices
+-Calculate room charges automatically
+-Export reservation data to CSV
+-Search reservations by guest name or date
 
-System Architecture
-The project follows the MVC (Model-View-Controller) architecture.
+##System Architecture
 
-Model – Java classes representing data entities (Reservation, User, Bill)
-View – JSP pages for user interface
-Controller – Servlets that process user requests and manage business logic
+The system follows the MVC (Model–View–Controller) architecture.
 
-This architecture improves code organization, maintainability, and scalability.
+Model
+-Represents database entities
+-Example: Reservation, User, Bill classes
 
-Database Design
-The system database includes the following main tables:
+View
+-JSP pages used to display the user interface
 
-Users – Stores login credentials and user roles
-Rooms – Stores room details and pricing
-Reservations – Stores reservation records
-Bills – Stores billing information related to reservations
+Controller
+-Java Servlets used to handle user requests and application logic
 
-These tables are connected using relational database relationships to ensure data consistency and integrity.
+##Database Design
 
-System Screenshots
+The system database contains the following tables:
 
-The system interface includes:
+users
+-user_id
+-username
+-password
+-role
 
-Login Page
-Reservation Form
-Reservation List Dashboard
-Billing Invoice Page
+rooms
+-room_id
+-room_type
+-price_per_night
+-availability_status
 
-Installation Guide
+reservations
+-reservation_no
+-guest_name
+-address
+-contact_number
+-room_type
+-check_in
+-check_out
+-status
 
-To run this project locally:
+bills
+-bill_id
+-reservation_no
+-room_charge
+-service_charge
+-total_amount
+-generated_date
 
-Install Java JDK
-Install Apache Tomcat Server
-Install MySQL Server
-Import the project into Eclipse IDE
-Configure the database connection
-Run the project on Tomcat Server
+##How to Run the Project
 
-GitHub Version Control
+Follow these steps to run the project:
+-Install Java JDK
+-Install Eclipse IDE for Enterprise Java
+-Install Apache Tomcat Server
+-Install MySQL Server
+-Open MySQL Workbench and create the database
+-Import the project into Eclipse
+-Configure the database connection
+-Deploy the project to Apache Tomcat
+-Open the system in a web browser
+
+URL:
+http://localhost:8087/OceanViewResort/login.jsp
+
+##Version Control
 
 This project uses Git and GitHub for version control.
 
-Development was tracked using multiple commits including:
-
-Initial project setup
-Database connection implementation
-User authentication development
-Reservation management implementation
-Billing system development
-
-UI improvements
-
-Final system testing and integration
+-Development commits include:
+-Initial project setup
+-Database connection configuration
+-User login functionality
+-Reservation management implementation
+-Billing generation feature
+-Export reservation data functionality
+-Authentication and admin access filters
+-User interface improvements
+-Final system integration and testing
